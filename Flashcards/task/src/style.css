@@ -1,0 +1,42 @@
+div, h1{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+body{
+    background: url("https://stepik.org/media/attachments/lesson/374893/world.png");
+    background-size: 80%;
+    background-position: 150px -15%;
+    background-repeat: no-repeat;
+}
+
+
+.flex-container{
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    height: 500px;
+    width: 500px;
+    justify-content: space-between;
+    top: 15%;
+    right: 35%;
+}
+
+.flex-item{
+    height: 150px;
+    width: 150px;
+    background-color: bisque;
+    text-align: center;
+    justify-content: space-between;
+    border-radius: 25px;
+    color: #764f1f;
+    padding: inherit;
+}
+
+p{
+    position: relative;
+    top: 29%;
+}
