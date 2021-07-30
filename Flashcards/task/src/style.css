@@ -1,7 +1,3 @@
-div, h1{
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
 h1{
     text-align: center;
 }
@@ -11,6 +7,7 @@ body{
     background-size: 80%;
     background-position: 150px -15%;
     background-repeat: no-repeat;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 
@@ -28,15 +25,42 @@ body{
 .flex-item{
     height: 150px;
     width: 150px;
-    background-color: bisque;
-    text-align: center;
-    justify-content: space-between;
-    border-radius: 25px;
-    color: #764f1f;
-    padding: inherit;
+    perspective: 1000px;
 }
 
-p{
+.card{
+    height: 100%;
+    width: 100%;
     position: relative;
-    top: 29%;
+    transition: all 0.5s linear;
+    transform-style: preserve-3d;
+}
+
+.front, .back{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border: solid #583c0c;
+}
+
+.front{
+    background-color: bisque;
+    color: #845b2c;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back{
+    background-color: #845b2c;
+    color: bisque;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.flex-item:hover .card{
+    transform: rotateY(180deg);
 }
